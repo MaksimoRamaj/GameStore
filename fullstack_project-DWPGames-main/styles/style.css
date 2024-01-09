@@ -1,0 +1,1946 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap");
+h1,
+h2,
+h3,
+p {
+  font-family: "Arimo", sans-serif;
+}
+
+body {
+  background-color: #181d3a;
+  color: white;
+  margin: 100px 0 0 0;
+  font-family: "Arimo", sans-serif;
+}
+
+.header .admin .logo {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header .admin .userMenu {
+  max-width: 250px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 1100px) {
+  .header .admin .userMenu {
+    max-width: unset;
+  }
+}
+
+.header header {
+  height: 65px;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  background-color: #181d3a;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Arimo", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header header .userMenu {
+  padding: 0;
+}
+
+.header header .addlayer {
+  display: block;
+}
+
+.header header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  cursor: pointer;
+  -webkit-box-flex: 0.8;
+      -ms-flex-positive: 0.8;
+          flex-grow: 0.8;
+}
+
+.header header .menu {
+  float: right;
+  display: none;
+}
+
+.header header #check,
+.header header #check2 {
+  display: none;
+}
+
+.header header ul {
+  list-style: none;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  text-align: center;
+}
+
+.header header ul .mobile_link {
+  display: none;
+}
+
+.header header ul .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header header ul .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1000;
+  background-color: #181d3a;
+  border-radius: 8px;
+}
+
+.header header ul .dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.header header ul .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header header ul li {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 24px;
+}
+
+.header header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header header ul li a:hover {
+  color: yellow;
+}
+
+.header header .userMenu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: start;
+}
+
+@media (max-width: 1100px) {
+  .header header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .header header .logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .header header .menu {
+    display: block;
+  }
+  .header header ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background: #181d3a;
+    top: 48px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .header header ul .desktop_link,
+  .header header ul .dropdown {
+    display: none;
+  }
+  .header header ul .mobile_link {
+    display: block;
+  }
+  .header header ul li {
+    display: block;
+    line-height: 100px;
+    position: relative;
+    margin: 0;
+    top: 15%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .header header .userMenu {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    text-align: center;
+  }
+  .header header #check:checked ~ .platformMenu {
+    position: absolute;
+    left: 0;
+  }
+  .header header #check2:checked ~ .userMenu {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.header header .icon {
+  font-size: 2.5em;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.header header .icon:hover {
+  color: yellow;
+}
+
+.header header .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px;
+}
+
+.header header #basket {
+  width: clamp(300px, 80%, 600px);
+  border-radius: 8px;
+  background-color: burlywood;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .header header #basket {
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+  }
+}
+
+.header header #basket .userinfo {
+  text-align: center;
+}
+
+.header header #basket .userinfo .username {
+  margin: 1ch;
+}
+
+.header header #basket .userinfo .message {
+  margin: 1ch;
+}
+
+.header header #basket .item {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  border-bottom: 1px solid white;
+}
+
+.header header #basket .item .quantity {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header header #basket .item .quantity .incrementer,
+.header header #basket .item .quantity .decrementer {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 8px;
+  border: 1px solid white;
+  color: white;
+}
+
+.header header #basket .checkout {
+  margin: 1ch;
+}
+
+.header header #basket .checkout .checkoutBtn {
+  padding: 1ch 3ch;
+  font-size: 26px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+footer {
+  height: 97px;
+  padding: 0 30px;
+  margin-top: 45px;
+  background-color: #13161f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .nav,
+footer .policy {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .nav .line,
+footer .policy .line {
+  height: 65px;
+  width: 1px;
+  background-color: #707070;
+}
+
+footer .nav .options p,
+footer .policy .options p {
+  font-size: 14px;
+  margin: 3px 0 0 10px;
+  color: #707070;
+}
+
+footer .nav .policies p,
+footer .policy .policies p {
+  font-size: 14px;
+  margin: 10px 0 10px 10px;
+  color: #707070;
+}
+
+.content {
+  padding: 0 15px;
+  max-width: 1522px;
+  margin: 0 auto;
+}
+
+.content fieldset {
+  background-color: #2b2525;
+  color: white;
+  border: solid 2px white;
+  border-radius: 8px;
+}
+
+.content .weeklyMsgCont {
+  width: clamp(100px, 80%, 500px);
+  margin: 0 auto;
+}
+
+.content .weeklyMsgCont fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .weeklyMsgCont fieldset img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: #181d3a;
+  color: white;
+  border: solid 2px white;
+  border-radius: 8px;
+}
+
+@media (min-width: 1100px) {
+  .content {
+    width: 80%;
+  }
+}
+
+.content a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.content .hero {
+  margin-top: 60px;
+}
+
+.content .hero h1 {
+  font-weight: 700;
+}
+
+.content .best-sales,
+.content .new-releases,
+.content .best-rate {
+  margin-top: 60px;
+}
+
+.content .best-sales h2,
+.content .new-releases h2,
+.content .best-rate h2 {
+  font-weight: 500;
+}
+
+.content .best-sales .cards,
+.content .new-releases .cards,
+.content .best-rate .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1217px) {
+  .content .best-sales .cards,
+  .content .new-releases .cards,
+  .content .best-rate .cards {
+    height: 200px;
+    overflow: hidden;
+  }
+}
+
+.content .best-sales .cards .card,
+.content .new-releases .cards .card,
+.content .best-rate .cards .card {
+  width: 190px;
+  height: 180px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 0 auto 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  .content .best-sales .cards .card,
+  .content .new-releases .cards .card,
+  .content .best-rate .cards .card {
+    width: 170px;
+    height: 160px;
+  }
+}
+
+.content .best-sales .cards .card img,
+.content .new-releases .cards .card img,
+.content .best-rate .cards .card img {
+  width: 190px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+@media (max-width: 530px) {
+  .content .best-sales .cards .card img,
+  .content .new-releases .cards .card img,
+  .content .best-rate .cards .card img {
+    width: 170px;
+    height: 160px;
+  }
+}
+
+.content .best-sales .button,
+.content .new-releases .button,
+.content .best-rate .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.content .best-sales .button h2,
+.content .new-releases .button h2,
+.content .best-rate .button h2 {
+  margin-right: 10px;
+}
+
+.content .best-sales .button span,
+.content .new-releases .button span,
+.content .best-rate .button span {
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+.content .platform {
+  margin-top: 60px;
+}
+
+.content .platform h2 {
+  font-weight: 500;
+}
+
+.content .platform .pbox {
+  width: 100%;
+  height: 72px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.content .platform .pc {
+  background-color: black;
+}
+
+.content .platform .ps {
+  background-color: #004098;
+}
+
+.content .platform .xb {
+  background-color: #0f7a10;
+}
+
+.content .platform .nt {
+  background-color: #e60012;
+}
+
+.allContent .filter {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: lightslategrey;
+  text-align: center;
+}
+
+.allContent .filter form {
+  margin: 10px 0;
+}
+
+.allContent .allProductsContainer {
+  margin: 0 auto;
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  .allContent .allProductsContainer {
+    max-width: 100%;
+  }
+}
+
+.allContent .allProductsContainer .productContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto 15px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.allContent .allProductsContainer .productContainer .product {
+  width: 190px;
+  height: 180px;
+  border: 1px solid white;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.allContent .allProductsContainer .productContainer .product img {
+  border-radius: 8px;
+}
+
+.allContent .allProductsContainer .productContainer .product .platformTag {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 8px;
+}
+
+.allContent .allProductsContainer .productContainer .title {
+  width: 180px;
+}
+
+.allContent .allProductsContainer .productContainer .title h3 {
+  margin: 5px 0;
+}
+
+.allContent .allProductsContainer .productContainer .price {
+  margin: 10px 0;
+  padding: 15px 0;
+  min-width: 180px;
+}
+
+.allContent .allProductsContainer .productContainer .price h3,
+.allContent .allProductsContainer .productContainer .price h4 {
+  margin: 2px;
+}
+
+.allContent .allProductsContainer .productContainer .price h4 {
+  float: left;
+}
+
+.allContent .allProductsContainer .productContainer .price button {
+  float: right;
+  height: 60px;
+  margin-top: -40px;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+  line-height: 13px;
+}
+
+.allContent .allProductsContainer .productContainer .price button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.singleProductContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* The dots/bullets/indicators */
+}
+
+.singleProductContainer .related {
+  width: clamp(200px, 90%, 1000px);
+}
+
+.singleProductContainer .related fieldset {
+  margin-top: 60px;
+}
+
+.singleProductContainer .related fieldset h2 {
+  font-weight: 500;
+}
+
+.singleProductContainer .related fieldset .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1217px) {
+  .singleProductContainer .related fieldset .cards {
+    height: 200px;
+    overflow: hidden;
+  }
+}
+
+.singleProductContainer .related fieldset .cards .card {
+  width: 190px;
+  height: 180px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 0 auto 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  .singleProductContainer .related fieldset .cards .card {
+    width: 170px;
+    height: 160px;
+  }
+}
+
+.singleProductContainer .related fieldset .cards .card img {
+  width: 190px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+@media (max-width: 530px) {
+  .singleProductContainer .related fieldset .cards .card img {
+    width: 170px;
+    height: 160px;
+  }
+}
+
+.singleProductContainer .thumbnail {
+  width: clamp(200px, 80%, 1000px);
+}
+
+.singleProductContainer .thumbnail img {
+  border: 1px solid white;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+}
+
+.singleProductContainer .titlecard {
+  width: 80%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.singleProductContainer .titlecard h2,
+.singleProductContainer .titlecard h3 {
+  margin: 0;
+}
+
+.singleProductContainer .titlecard h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.singleProductContainer .titlecard h3 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: end;
+}
+
+.singleProductContainer .break {
+  width: 80%;
+  border-bottom: 2px solid white;
+}
+
+.singleProductContainer .dateNrate {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.singleProductContainer .dateNrate .releaseDate {
+  color: #dfc8c8;
+}
+
+.singleProductContainer .dateNrate .releaseDate::before {
+  content: "Released: ";
+  color: white;
+}
+
+.singleProductContainer .dateNrate .rating::before {
+  content: "Metarating: ";
+  color: white;
+}
+
+.singleProductContainer .description {
+  width: 80%;
+}
+
+.singleProductContainer .primarySpecs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+
+.singleProductContainer .primarySpecs .spec {
+  height: 50px;
+  width: 60px;
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+.singleProductContainer .video {
+  width: clamp(200px, 80%, 1000px);
+  position: relative;
+  margin: 20px 9.5%;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.singleProductContainer .video iframe {
+  vertical-align: middle;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+}
+
+.singleProductContainer .mySlides {
+  display: none;
+}
+
+.singleProductContainer img {
+  vertical-align: middle;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+}
+
+.singleProductContainer .slideshow-container {
+  width: clamp(200px, 80%, 1000px);
+  position: relative;
+  margin: auto 9.5%;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.singleProductContainer .prev,
+.singleProductContainer .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.singleProductContainer .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.singleProductContainer .prev:hover,
+.singleProductContainer .next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.singleProductContainer .prev:hover {
+  border-radius: 0 8px 8px 0;
+}
+
+.singleProductContainer .next:hover {
+  border-radius: 8px 0 0 8px;
+}
+
+.singleProductContainer .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.singleProductContainer .secondarySpecs {
+  margin-top: 30px;
+}
+
+.singleProductContainer .secondarySpecs table {
+  border-spacing: 0;
+  border-radius: 8px;
+}
+
+.singleProductContainer .secondarySpecs table td {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 0 8px 8px 0;
+}
+
+.singleProductContainer .secondarySpecs table th {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+}
+
+.singleProductContainer .secondarySpecs .related fieldset {
+  margin-top: 60px;
+}
+
+.singleProductContainer .secondarySpecs .related fieldset h2 {
+  font-weight: 500;
+}
+
+.singleProductContainer .secondarySpecs .related fieldset .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1217px) {
+  .singleProductContainer .secondarySpecs .related fieldset .cards {
+    height: 200px;
+    overflow: hidden;
+  }
+}
+
+.singleProductContainer .secondarySpecs .related fieldset .cards .card {
+  width: 190px;
+  height: 180px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 0 auto 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  .singleProductContainer .secondarySpecs .related fieldset .cards .card {
+    width: 170px;
+    height: 160px;
+  }
+}
+
+.singleProductContainer .secondarySpecs .related fieldset .cards .card img {
+  width: 190px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+@media (max-width: 530px) {
+  .singleProductContainer .secondarySpecs .related fieldset .cards .card img {
+    width: 170px;
+    height: 160px;
+  }
+}
+
+.singleProductContainer .productPricing {
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+.singleProductContainer .addToBasket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.singleProductContainer .addToBasket button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+}
+
+.singleProductContainer .addToBasket button p,
+.singleProductContainer .addToBasket button i {
+  margin: 0 10px;
+}
+
+.singleProductContainer .addToBasket button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.adminContent .newsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.adminContent .newsContainer .weekly img {
+  background-color: #181d3a;
+  color: white;
+  border: solid 1px white;
+  border-radius: 8px;
+}
+
+.adminContent .newsContainer .news1,
+.adminContent .newsContainer .weekly,
+.adminContent .newsContainer .news2,
+.adminContent .newsContainer .info {
+  padding: 2ch;
+  padding-bottom: 5ch;
+}
+
+.adminContent .newsContainer form {
+  width: clamp(250px, 80%, 1000px);
+}
+
+.adminContent .newsContainer form fieldset {
+  background-color: #181d3a;
+  color: white;
+  border: solid 1px white;
+  border-radius: 8px;
+  padding: 10px 60px;
+}
+
+.adminContent .newsContainer form fieldset input {
+  width: 100%;
+  height: 30px;
+}
+
+.adminContent .newsContainer form fieldset textarea {
+  height: 200px;
+  width: 100%;
+  resize: vertical;
+}
+
+.adminContent .newsContainer form .subButton {
+  width: 250px;
+  height: 60px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.adminContent .addProductContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.adminContent .addProductContainer form {
+  width: clamp(250px, 80%, 1000px);
+}
+
+.adminContent .addProductContainer form fieldset {
+  background-color: #181d3a;
+  color: white;
+  border: solid 1px white;
+  padding: 0 60px;
+  border-radius: 8px;
+}
+
+.adminContent .addProductContainer form fieldset input {
+  width: 100%;
+  height: 30px;
+}
+
+.adminContent .addProductContainer form fieldset .check {
+  height: 20px;
+  width: 20px;
+}
+
+.adminContent .addProductContainer form fieldset textarea {
+  height: 120px;
+  width: 100%;
+  resize: vertical;
+}
+
+.adminContent .addProductContainer form fieldset .subButton {
+  width: 250px;
+  height: 60px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.adminContent .addProductContainer .tickBoxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.adminContent .addProductContainer .tickBoxContainer .platformCont,
+.adminContent .addProductContainer .tickBoxContainer .genreCont {
+  width: 50%;
+}
+
+.adminContent .addProductContainer .tickBoxContainer .platform {
+  border-right: 1px solid white;
+}
+
+.adminContent .addProductContainer .tickBoxContainer .platform,
+.adminContent .addProductContainer .tickBoxContainer .genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1ch;
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .adminContent .addProductContainer .tickBoxContainer .platform,
+  .adminContent .addProductContainer .tickBoxContainer .genre {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: unset;
+  }
+}
+
+.adminContent .addProductContainer .tickBoxContainer .inputCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.adminContent .editProduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.adminContent .editProduct form {
+  width: clamp(250px, 80%, 1000px);
+}
+
+.adminContent .editProduct form fieldset {
+  background-color: #181d3a;
+  color: white;
+  border: solid 1px white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5ch;
+  border-radius: 8px;
+}
+
+.adminContent .editProduct form input {
+  width: 100%;
+  height: 30px;
+}
+
+.adminContent .editProduct form textarea {
+  height: 120px;
+  width: 100%;
+  resize: vertical;
+}
+
+.adminContent .editProduct form .subButton {
+  width: 250px;
+  height: 60px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+.adminContent .productList {
+  display: -ms-grid;
+  display: grid;
+  /*-ms-grid-columns:minmax(40rem, 1fr)[auto-fill];*/
+      grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+@media (max-width: 700px) {
+  .adminContent .productList {
+    /*-ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];*/
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
+}
+
+.adminContent .productList .currentProductContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #201c34;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 0 auto 6ch auto;
+  width: clamp(200px, 80%, 600px);
+}
+
+@media (max-width: 700px) {
+  .adminContent .productList .currentProductContainer {
+    width: clamp(100px, 80%, 300px);
+  }
+}
+
+.adminContent .productList .currentProductContainer .productNo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 8px;
+  border-bottom: 1px solid white;
+  padding: 0 2ch;
+}
+
+.adminContent .productList .currentProductContainer .productSubContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .adminContent .productList .currentProductContainer .productSubContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.adminContent .productList .currentProductContainer .productSubContainer .productTitle,
+.adminContent .productList .currentProductContainer .productSubContainer .productPrice,
+.adminContent .productList .currentProductContainer .productSubContainer .productReleaseDate,
+.adminContent .productList .currentProductContainer .productSubContainer .productRating,
+.adminContent .productList .currentProductContainer .productSubContainer .productPlatform {
+  padding: 1ch;
+  overflow-wrap: break-word;
+  min-width: 90%;
+}
+
+.adminContent .productList .currentProductContainer .productSubContainer .productInfoContainer .productImg {
+  border-radius: 8px;
+  border: 1px solid white;
+  margin: 1ch;
+}
+
+.adminContent .productList .currentProductContainer .productSubContainer .productInfoContainer .productImg img {
+  border-radius: 8px;
+  aspect-ratio: 4/3;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.adminContent .productList .currentProductContainer .productSubContainer .productBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media (max-width: 700px) {
+  .adminContent .productList .currentProductContainer .productSubContainer .productBtnContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.adminContent .productList .currentProductContainer .productSubContainer .productBtnContainer button {
+  width: 70px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  background-color: transparent;
+}
+
+.adminContent .userList {
+  width: clamp(300px, 80%, 1200px);
+  margin: 0 auto;
+}
+
+.adminContent .userList .currentRegisteredUsers {
+  display: -ms-grid;
+  display: grid;
+  /*-ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];*/
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.adminContent .userList .currentRegisteredUsers .user {
+  background-color: #1a2438;
+  color: white;
+  border: solid 1px white;
+  border-radius: 8px;
+  padding: 1ch;
+  margin: 1ch;
+}
+
+.adminContent .userList .currentRegisteredUsers .user button {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid white;
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  background-color: transparent;
+}
+
+.adminContent .userList .currentRegisteredUsers .user .username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminContent .userList .currentRegisteredUsers .user .username .name {
+  padding: 0;
+  font-size: 20px;
+}
+
+.adminContent .userList .currentRegisteredUsers .user .Fname {
+  margin: -1ch 0;
+}
+
+.adminContent .userList .currentRegisteredUsers .user .email {
+  margin: -2ch 0;
+}
+
+.adminContent .userList .currentRegisteredUsers .user .descrip .tion {
+  font-style: italic;
+}
+
+.adminContent .userList .currentRegisteredUsers .user .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.adminContent .changePass {
+  width: clamp(100px, 80%, 300px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.adminContent .changePass fieldset {
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.adminContent .changePass fieldset .changePassBtn {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin-bottom: -20px;
+  font-size: 20px;
+}
+
+.adminContent .editUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 180px;
+}
+
+.adminContent .editUser form {
+  width: clamp(250px, 80%, 1000px);
+}
+
+.adminContent .editUser form fieldset {
+  padding: 0 60px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.adminContent .editUser form fieldset input {
+  width: 100%;
+  height: 30px;
+}
+
+.adminContent .editUser form fieldset textarea {
+  height: 120px;
+  width: 100%;
+  resize: vertical;
+}
+
+.adminContent .editUser form fieldset .updateBtn {
+  width: 250px;
+  height: 60px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.adminContent .editUser .tickBoxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.adminContent .editUser .tickBoxContainer .platformCont,
+.adminContent .editUser .tickBoxContainer .genreCont {
+  width: 50%;
+}
+
+.adminContent .editUser .tickBoxContainer .platform,
+.adminContent .editUser .tickBoxContainer .genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1ch;
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .adminContent .editUser .tickBoxContainer .platform,
+  .adminContent .editUser .tickBoxContainer .genre {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: unset;
+  }
+}
+
+.adminContent .editUser .tickBoxContainer .inputCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cartbox {
+  padding: 0 5ch;
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  width: clamp(100px, 80%, 1000px);
+  margin: 0 auto;
+}
+
+.cartbox .cart_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.cartbox .cart_item img {
+  border-radius: 8px;
+  height: 120px;
+  min-width: 120px;
+}
+
+.cartbox .cart_item .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cartbox .cart_item .info h3,
+.cartbox .cart_item .info h2 {
+  margin: 0 0 10px 30px;
+}
+
+.cartbox .cart_item .info .price {
+  margin-top: auto;
+}
+
+.cartbox .cart_item button {
+  height: 40px;
+  width: 100px;
+  margin: auto 0 auto auto;
+  color: white;
+  background-color: red;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cartbox .cart_item button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.cartbox h1 {
+  text-align: center;
+}
+
+.cartbox h2 {
+  text-align: end;
+  margin-bottom: 50px;
+}
+
+.cartbox .checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cartbox .checkout p {
+  position: absolute;
+  font-size: 14px;
+  left: 50%;
+  margin-top: -20px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.cartbox .checkout input {
+  height: 30px;
+  width: 300px;
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  border: none;
+}
+
+.cartbox .checkout .order_button {
+  width: 250px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 45px;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.cartbox .checkout .order_button:active {
+  -webkit-transform: translate(-50%, 2px);
+          transform: translate(-50%, 2px);
+}
+
+.orders {
+  padding: 0 5ch;
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  width: 1000px;
+  overflow: auto;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.orders table {
+  width: 100%;
+  padding: 0 25px;
+  border-collapse: collapse;
+}
+
+.orders table th {
+  line-height: 30px;
+}
+
+.orders table th,
+.orders table td {
+  text-align: start;
+  padding: 0 5px;
+  vertical-align: top;
+}
+
+.orders table th button,
+.orders table td button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 7px;
+}
+
+.orders table th button:active,
+.orders table td button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.orders table .headline {
+  border-bottom: 1px solid white;
+}
+
+.orders table .titles {
+  max-width: 200px;
+}
+
+.orders table .status {
+  text-transform: uppercase;
+}
+
+.orders table .status[data-status="Delivered"] {
+  color: lightgreen;
+}
+
+.orders table .status[data-status="Pending"] {
+  color: red;
+}
+
+.orders table tr {
+  line-height: 20px;
+}
+
+.about {
+  margin: 0 auto;
+  width: clamp(100px, 80%, 1000px);
+}
+
+.about fieldset {
+  padding: 0 5ch;
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.contactFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactFormContainer fieldset {
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 6ch;
+  border-radius: 8px;
+}
+
+.contactFormContainer textarea {
+  resize: vertical;
+}
+
+.contactFormContainer .submitBtn {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: -4ch;
+  width: 60%;
+}
+
+.termsOfService {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.termsOfService .termsBox {
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: #181d3a;
+  padding: 0 1ch;
+  color: rgba(236, 231, 225, 0.815);
+}
+
+.FAQ {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.FAQ .faq {
+  padding: 2ch;
+  background-color: #181d3a;
+  border-radius: 8px;
+  margin: 2ch auto;
+  text-align: left;
+}
+
+.FAQ .faq .question {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.CreateNewUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.CreateNewUser form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto 100px auto;
+}
+
+.CreateNewUser form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.CreateNewUser form fieldset .button {
+  width: 150px;
+  height: 50px;
+  margin-bottom: -40px;
+  font-size: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.login {
+  width: clamp(100px, 80%, 300px);
+  margin: 0 auto;
+}
+
+.login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 10ch auto;
+}
+
+.login form fieldset {
+  background-color: #181d3a;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.login form fieldset .button {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+
+.login .createNew {
+  background-color: #181d3a;
+  border: 1px solid white;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10ch;
+}
+
+.login .createNew a button {
+  margin-top: -1ch;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
